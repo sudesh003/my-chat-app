@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@600&display=swap');
+
+@media (max-width:10000px) {
+  .header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 3vw;
+    color: white;
+    background-image: url(./chatback.jpg);
+    font-family: 'Ysabeau SC', sans-serif;
+    font-size: large;
+    padding-top: 10px;
+  }
+
+  .logo {
+    margin-right: 1vw;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .panelButton {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    border-radius: 15px;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+
+  .slideBar {
+    position: absolute;
+    top: 0;
+    right: 0%;
+    width: 20%;
+    height: 100vh;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(32, 87, 56));
+    z-index: 999;
+  }
+
+  .content {
+    display: block;
+    padding: 20px;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 32px;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+
+  .closeButton:hover {
+    color: red;
+  }
+
+  .onlineTag {
+    margin-bottom: 7px;
+  }
+
+  .userContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user {
+    width: 15vw;
+  }
+
+  .userName {
+    word-wrap: break-word;
+  }
+
+  .onlineContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .onlineDot {
+    margin-top: 12px;
+    margin-left: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 255, 0);
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+
+  .userContainerWrapper {
+    height: 80vh;
+    overflow-y: auto;
+  }
+
+  .chatContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    min-height: 89vh;
+    background-image: url(./chatback.jpg);
+  }
+
+  .messageBox {
+    border: 1px solid #878787;
+    width: 57vw;
+    height: 70vh;
+    margin-top: 20px;
+  }
+
+  .inputContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .textField {
+    outline: none;
+    min-height: 40px;
+    max-height: 70px;
+    width: 50vw;
+    padding-top: 5px;
+    margin-right: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow: auto;
+    background-color: white;
+    border: 1px solid #ffffff;
+    word-wrap: break-word;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-family: 'Proza Libre', sans-serif;
+    font-size: medium;
+  }
+
+  .textField input {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    caret-color: #000000;
+    text-align: center;
+  }
+
+  .textField input:focus {
+    outline: none;
+  }
+
+
+  .hasValue::after {
+    display: none;
+  }
+
+  .textField::before {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    content: attr(placeholder);
+    color: #aaa;
+    pointer-events: none;
+    font-family: 'Proza Libre', sans-serif;
+  }
+
+  .hasValue::before {
+    display: none;
+  }
+
+  .sendButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 7px;
+  }
+
+  .messageBox {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+
+  .messageBox.scroll-down {
+    scroll-behavior: smooth;
+    scroll-margin-bottom: 10px;
+  }
+
+
+  .message {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    border: 2px solid white;
+    width: 20vw;
+    min-height: 5vh;
+    margin: 2vh 5px;
+    border-radius: 20px;
+    word-wrap: break-word;
+    font-family: 'Proza Libre', sans-serif;
+    font-size: medium;
+  }
+
+  .left {
+    float: left;
+    clear: both;
+  }
+
+  .right {
+    float: right;
+    clear: both;
+  }
+}
+
+
+@media (max-width:480px) {
+  .header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5vw;
+    color: white;
+    background-image: url(./chatback.jpg);
+    font-family: 'Ysabeau SC', sans-serif;
+    font-size: large;
+    padding-top: 0px;
+  }
+
+  .logo {
+    margin-right: 1vw;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .panelButton {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    border-radius: 15px;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+
+  .slideBar {
+    position: absolute;
+    top: 0;
+    right: 0%;
+    width: 60%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(32, 87, 56));
+    z-index: 999;
+  }
+
+  .content {
+    display: block;
+    padding: 20px;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 32px;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+
+  .closeButton:hover {
+    color: red;
+  }
+
+  .onlineContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .onlineTag {
+    margin-bottom: 10px;
+  }
+
+  .userContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user {
+    width: 15vw;
+  }
+
+  .userName {
+    word-wrap: break-word;
+  }
+
+  .onlineContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .onlineDot {
+    margin-bottom: 8px;
+    margin-left: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 255, 0);
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+
+  .userContainerWrapper {
+    height: 80vh;
+    overflow-y: auto;
+  }
+
+  .chatContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    min-height: 90vh;
+    background-image: url(./chatback.jpg);
+  }
+
+  .messageBox {
+    border: 1px solid #878787;
+    width: 90vw;
+    height: 70vh;
+    margin-top: 0px;
+  }
+
+  .inputContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .textField {
+    outline: none;
+    min-height: 40px;
+    max-height: 70px;
+    width: 70vw;
+    margin-right: 10px;
+    overflow: auto;
+    background-color: white;
+    border: 1px solid #ffffff;
+    word-wrap: break-word;
+    font-family: 'Proza Libre', sans-serif;
+    font-size: medium;
+  }
+
+  .hasValue::after {
+    display: none;
+  }
+
+  .textField::before {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    content: attr(placeholder);
+    display: block;
+    color: #aaa;
+    pointer-events: none;
+    font-family: 'Proza Libre', sans-serif;
+  }
+
+  .hasValue::before {
+    display: none;
+  }
+
+  .sendButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-top: 7px;
+  }
+
+  .messageBox {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+
+  .messageBox.scroll-down {
+    scroll-behavior: smooth;
+    scroll-margin-bottom: 10px;
+  }
+
+
+  .message {
+    color: white;
+    padding-left: 3px;
+    padding-right: 3px;
+    border: 2px solid white;
+    width: 30vw;
+    min-height: 5vh;
+    margin: 2vh 5px;
+    border-radius: 20px;
+    word-wrap: break-word;
+    font-family: 'Proza Libre', sans-serif;
+    font-size: medium;
+  }
+
+  .left {
+    float: left;
+    clear: both;
+  }
+
+  .right {
+    float: right;
+    clear: both;
+  }
+}
