@@ -65,16 +65,8 @@ function Home() {
     setIsOpen(!isOpen);
   };
 
-  function playAudio(){
-    const audioEl = document.getElementsByClassName("audio-element")[0]
-    audioEl.play()
-  };
-
   return (
     <>
-      <audio className="audio-element">
-          <source src="https://assets.coderrocketfuel.com/pomodoro-times-up.mp3"></source>
-      </audio>
       <div className="header">
         <img className="logo" src={chatlogo} alt="chat symbol"/>
         <h1>Cat Chat</h1>
