@@ -3,7 +3,7 @@ import chatlogo from './cat2.jpg';
 import './homeStyle.css';
 import { FaUsers, FaPaperPlane } from 'react-icons/fa';
 import io from 'socket.io-client';
-const socket = io.connect('http://ec2-52-66-205-55.ap-south-1.compute.amazonaws.com:8000/');
+const socket = io.connect('http://localhost:8000');
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
