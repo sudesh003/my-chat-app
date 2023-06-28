@@ -10,7 +10,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: '*',
+        origin: 'http://ec2-52-66-205-55.ap-south-1.compute.amazonaws.com:3000/',
         methods: ['GET', 'POST'],
     },
 });
